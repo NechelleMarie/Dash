@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dash — People of Valor Operations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">POV</span>
+    <div>
+      <h1>Dash</h1>
+      <p class="tagline">People of Valor — Operations Overview</p>
+    </div>
+  </div>
+  <div class="today" id="todayLabel"></div>
+</header>
+
+<main>
+
+  <!-- Snapshot stats: the numbers you want to see the second you open Dash -->
+  <section class="stats">
+    <div class="stat-card">
+      <span class="stat-label">This Month's Income</span>
+      <span class="stat-value" id="statTotalIncome">$0</span>
+      <span class="stat-sub" id="statIncomeBreakdown">Skool $0 + Pipeline $0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Premium Clients (Skool)</span>
+      <span class="stat-value" id="statPremiumClients">0</span>
+      <span class="stat-sub">Enrolled on the platform</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Conversion Rate</span>
+      <span class="stat-value" id="statConversionRate">0%</span>
+      <span class="stat-sub">Skool premium conversion</span>
+    </div>
+  </section>
+
+  <div class="grid">
+
+    <!-- Revenue & Projected Income -->
+    <section class="card" id="revenueCard">
+      <h2>Revenue &amp; Projected Income</h2>
+      <p class="card-hint">Log each month's Skool payouts and pipeline/proposal income. This feeds the stat tile above.</p>
+      <form id="revenueForm" class="inline-form">
+        <input type="month" id="revenueMonth" required>
+        <input type="number" id="revenueSkool" placeholder="Skool payouts ($)" min="0" step="0.01" required>
+        <input type="number" id="revenuePipeline" placeholder="Pipeline / proposals ($)" min="0" step="0.01" required>
+        <button type="submit">Log Month</button>
+      </form>
+      <table class="data-table">
+        <thead>
+          <tr><th>Month</th><th>Skool</th><th>Pipeline</th><th>Total</th><th></th></tr>
+        </thead>
+        <tbody id="revenueTableBody"></tbody>
+      </table>
+    </section>
+
+    <!-- Skool Tracking -->
+    <section class="card" id="skoolCard">
+      <h2>Skool Platform</h2>
+      <p class="card-hint">Your current offer lives here. Update these two numbers as they change.</p>
+      <form id="skoolForm" class="inline-form">
+        <input type="number" id="skoolPremiumClients" placeholder="Premium clients enrolled" min="0" step="1" required>
+        <input type="number" id="skoolConversionRate" placeholder="Conversion rate (%)" min="0" max="100" step="0.1" required>
+        <button type="submit">Update</button>
+      </form>
+    </section>
+
+    <!-- Client Pipeline -->
+    <section class="card wide" id="clientsCard">
+      <h2>Client Pipeline</h2>
+      <p class="card-hint">Every active client, their engagement stage, and what's needed from you next.</p>
+      <form id="clientForm" class="inline-form">
+        <input type="text" id="clientName" placeholder="Client name" required>
+        <select id="clientStage" required>
+          <option value="hot">Hot</option>
+          <option value="warm">Warm</option>
+          <option value="cold">Cold</option>
+        </select>
+        <input type="text" id="clientNextAction" placeholder="What's needed from me?" required>
+        <button type="submit">Add Client</button>
+      </form>
+      <table class="data-table">
+        <thead>
+          <tr><th>Client</th><th>Stage</th><th>Next Action</th><th></th></tr>
+        </thead>
+        <tbody id="clientsTableBody"></tbody>
+      </table>
+    </section>
+
+    <!-- Launch & Content Calendar -->
+    <section class="card" id="calendarCard">
+      <h2>Launches &amp; Content Calendar</h2>
+      <div class="calendar-nav">
+        <button id="calPrev" type="button" aria-label="Previous month">&#8249;</button>
+        <span id="calMonthLabel"></span>
+        <button id="calNext" type="button" aria-label="Next month">&#8250;</button>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+      <form id="eventForm" class="inline-form">
+        <input type="date" id="eventDate" required>
+        <input type="text" id="eventTitle" placeholder="Launch or content title" required>
+        <button type="submit">Add to Calendar</button>
+      </form>
+      <ul class="event-list" id="upcomingEventsList"></ul>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="card" id="todoCard">
+      <h2>To-Do List</h2>
+      <form id="todoForm" class="inline-form">
+        <input type="text" id="todoText" placeholder="Add a task" required>
+        <button type="submit">Add</button>
+      </form>
+      <ul class="todo-list" id="todoList"></ul>
+    </section>
+
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
