@@ -19,20 +19,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
-  /* Layout: one calm reading column on linen, deep gold carries every action; sections alternate linen and a deeper sand wash. */
+  /* Layout: one calm reading column on dusty rose, warm taupe carries every action; sections alternate dusty rose and soft blush beige; white for cards and the closing invitation. */
   :root {
-    --bg: #F7F2EA;          /* warm cream */
-    --wash: #EFE6D8;        /* sand wash for alternating sections */
-    --card: #FFFFFF;
-    --ink: #2B2118;         /* warm near black */
-    --muted: #5E5246;
-    --line: #E3D8C6;
-    --plum: #B5852F;        /* deep gold: buttons, accents */
-    --plum-ink: #2B2118;    /* espresso text on gold */
-    --plum-soft: #F3E7CF;  /* light gold tint */
-    --rose: #B5852F;        /* gold: decorative only */
-    --label: #7A5718;       /* dark gold for small text */
-    --focus: #7A5718;
+    --bg: #C8A29E;          /* dusty rose: main background, header, footer */
+    --wash: #D4B8B0;        /* soft blush beige: alternating sections, highlights */
+    --card: #FFFFFF;        /* white accents */
+    --ink: #0E0E0E;         /* near black: headings and body text */
+    --muted: #3A2E2B;       /* secondary text */
+    --line: #B8928D;
+    --plum: #8F7166;        /* warm taupe: primary buttons */
+    --plum-ink: #FFFFFF;    /* white button text */
+    --plum-soft: #D4B8B0;   /* soft blush beige */
+    --rose: #8F7166;        /* taupe: decorative markers */
+    --label: #0E0E0E;       /* small uppercase labels */
+    --focus: #0E0E0E;
     --font-display: "Young Serif", Georgia, "Times New Roman", serif;
     --font-body: "Figtree", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --step--1: 0.9375rem;
@@ -45,10 +45,6 @@
     --radius: 14px;
     color-scheme: light;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg: #1E1A16; --wash: #26211B; --card: #2E2720; --ink: #F5EEE3; --muted: #CFC3B1; --line: #463D32; --plum: #C99A45; --plum-ink: #2B2118; --plum-soft: #3A3020; --rose: #C99A45; --label: #D9B26A; --focus: #E3C27F; color-scheme: dark; }
-  }
-  :root[data-theme="dark"] { --bg: #1E1A16; --wash: #26211B; --card: #2E2720; --ink: #F5EEE3; --muted: #CFC3B1; --line: #463D32; --plum: #C99A45; --plum-ink: #2B2118; --plum-soft: #3A3020; --rose: #C99A45; --label: #D9B26A; --focus: #E3C27F; color-scheme: dark; }
 
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -81,12 +77,12 @@
     display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
     min-height: 56px; padding: 0.95rem 1.75rem;
     background: var(--plum); color: var(--plum-ink);
-    font-family: var(--font-body); font-size: 1.0625rem; font-weight: 700; letter-spacing: 0.01em;
+    font-family: var(--font-body); font-size: 1.1875rem; font-weight: 700; letter-spacing: 0.01em;
     text-decoration: none; border-radius: 999px;
-    box-shadow: 0 10px 24px -14px rgba(181, 133, 47, 0.7);
+    box-shadow: 0 10px 24px -14px rgba(143, 113, 102, 0.7);
     transition: transform 160ms ease, box-shadow 160ms ease;
   }
-  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -14px rgba(181, 133, 47, 0.8); }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -14px rgba(143, 113, 102, 0.8); }
   .btn svg { width: 18px; height: 18px; flex: none; }
   .cta { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .cta-note { font-size: var(--step--1); color: var(--muted); }
@@ -102,7 +98,7 @@
   .brandmark { font-family: var(--font-display); font-size: 1.125rem; margin-bottom: clamp(2.5rem, 7vw, 4rem); }
   .brandmark span { color: var(--muted); font-family: var(--font-body); font-size: var(--step--1); display: block; letter-spacing: 0.02em; }
   .hero h1 { font-size: var(--step-3); }
-  .hero h1 em { font-style: normal; text-decoration: underline; text-decoration-color: var(--plum); text-decoration-thickness: 0.09em; text-underline-offset: 0.14em; text-decoration-skip-ink: none; }
+  .hero h1 em { font-style: normal; text-decoration: underline; text-decoration-color: var(--card); text-decoration-thickness: 0.09em; text-underline-offset: 0.14em; text-decoration-skip-ink: none; }
   .hero .stack { gap: 1.75rem; }
 
   /* Recognition list */
@@ -144,7 +140,7 @@
     font-size: 0.75rem; font-weight: 600; text-align: center; padding-block: 0.45rem; border-radius: 8px;
     background: var(--plum-soft); color: var(--ink); font-variant-numeric: tabular-nums;
   }
-  .week span:first-child { background: var(--plum); color: var(--plum-ink); }
+  .week span:first-child { background: var(--ink); color: var(--card); }
 
   /* About */
   .about { display: grid; gap: 2rem; align-items: start; }
@@ -176,10 +172,9 @@
   details > p { padding: 0 1.25rem 1.25rem; color: var(--muted); }
 
   /* Closing */
-  .closing { background: var(--plum); color: var(--plum-ink); text-align: left; }
+  .closing { background: var(--card); color: var(--ink); text-align: left; }
   .closing h2 { font-size: var(--step-3); }
-  .closing .btn { background: var(--plum-ink); color: var(--plum); box-shadow: none; }
-  .closing .cta-note { color: var(--plum-ink); opacity: 0.85; }
+  .closing .cta-note { color: var(--muted); }
 
   /* Footer */
   footer { padding-block: 2.5rem; font-size: var(--step--1); color: var(--muted); }
