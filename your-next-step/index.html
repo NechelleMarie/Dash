@@ -19,19 +19,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
-  /* Layout: one calm reading column on linen, plum carries every action; sections alternate linen and a deeper sand wash. */
+  /* Layout: one calm reading column on linen, crimson carries every action; sections alternate linen and a deeper sand wash. */
   :root {
     --bg: #F8F3EE;          /* linen */
     --wash: #EFE5DB;        /* sand wash for alternating sections */
     --card: #FFFCF9;
-    --ink: #2B1E29;         /* plum-tinted near black */
-    --muted: #5D4D58;
-    --line: #DCCFC3;
-    --plum: #4E1D48;        /* deep plum: buttons, accents */
-    --plum-ink: #FFFFFF;    /* text on plum */
-    --plum-soft: #EADCE6;
-    --rose: #9C6A8F;
-    --focus: #B06AA3;
+    --ink: #2A1C1D;         /* warm near black */
+    --muted: #5E4A4B;
+    --line: #E2D2CE;
+    --plum: #95111e;        /* crimson: buttons, accents */
+    --plum-ink: #FFFFFF;    /* text on crimson */
+    --plum-soft: #F0E1DE;  /* light tint of dusty rose */
+    --rose: #c8a29e;        /* dusty rose: decorative only */
+    --label: #95111e;       /* small uppercase labels */
+    --focus: #95111e;
     --font-display: "Young Serif", Georgia, "Times New Roman", serif;
     --font-body: "Figtree", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --step--1: 0.9375rem;
@@ -46,15 +47,11 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #1B1419; --wash: #241B21; --card: #2C2129; --ink: #F4ECE8; --muted: #CBBBC5;
-      --line: #43343E; --plum: #D9B4D0; --plum-ink: #2A1226; --plum-soft: #3A2736;
-      --rose: #D0A3C4; --focus: #E9C6E0; color-scheme: dark;
+      --bg: #1C1516; --wash: #251C1D; --card: #2D2223; --ink: #F5ECEA; --muted: #CDBDBB; --line: #463637; --plum: #c8a29e; --plum-ink: #2A1012; --plum-soft: #3A2728; --rose: #c8a29e; --label: #D9B8B4; --focus: #E3C5C1; color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #1B1419; --wash: #241B21; --card: #2C2129; --ink: #F4ECE8; --muted: #CBBBC5;
-    --line: #43343E; --plum: #D9B4D0; --plum-ink: #2A1226; --plum-soft: #3A2736;
-    --rose: #D0A3C4; --focus: #E9C6E0; color-scheme: dark;
+    --bg: #1C1516; --wash: #251C1D; --card: #2D2223; --ink: #F5ECEA; --muted: #CDBDBB; --line: #463637; --plum: #c8a29e; --plum-ink: #2A1012; --plum-soft: #3A2728; --rose: #c8a29e; --label: #D9B8B4; --focus: #E3C5C1; color-scheme: dark;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -78,7 +75,7 @@
   .wash { background: var(--wash); }
   .stack { display: flex; flex-direction: column; gap: 1.25rem; }
   .eyebrow {
-    font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose);
+    font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--label);
   }
   .lede { font-size: var(--step-1); line-height: 1.55; }
   .muted { color: var(--muted); }
@@ -90,10 +87,10 @@
     background: var(--plum); color: var(--plum-ink);
     font-family: var(--font-body); font-size: 1.0625rem; font-weight: 700; letter-spacing: 0.01em;
     text-decoration: none; border-radius: 999px;
-    box-shadow: 0 10px 24px -14px rgba(78, 29, 72, 0.7);
+    box-shadow: 0 10px 24px -14px rgba(149, 17, 30, 0.7);
     transition: transform 160ms ease, box-shadow 160ms ease;
   }
-  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -14px rgba(78, 29, 72, 0.8); }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -14px rgba(149, 17, 30, 0.8); }
   .btn svg { width: 18px; height: 18px; flex: none; }
   .cta { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .cta-note { font-size: var(--step--1); color: var(--muted); }
@@ -144,7 +141,7 @@
   /* Takeaways */
   .takeaways { display: grid; gap: 1rem; }
   .take { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem 1.35rem; display: flex; flex-direction: column; gap: 0.5rem; }
-  .take .label { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose); }
+  .take .label { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--label); }
   .take h3 { font-size: 1.5rem; }
   .week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.75rem; }
   .week span {
