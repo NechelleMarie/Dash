@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap">
 <style>
   :root {
-    --bg: #F8F3EE; --card: #FFFCF9; --ink: #2B201B; --muted: #5E4B42; --line: #E6D6CF;
-    --plum: #96644C; --rose: #EBC4C0; --label: #7A5240; --focus: #96644C;
+    --bg: #F7F2EA; --card: #FFFFFF; --ink: #2B2118; --muted: #5E5246; --line: #E3D8C6;
+    --plum: #B5852F; --rose: #B5852F; --label: #7A5718; --focus: #7A5718;
     --font-display: "Young Serif", Georgia, "Times New Roman", serif;
     --font-body: "Figtree", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg: #1C1516; --wash: #251C1D; --card: #2D2223; --ink: #F5ECEA; --muted: #CDBDBB; --line: #463637; --plum: #EBC4C0; --plum-ink: #2A1A14; --plum-soft: #3A2728; --rose: #EBC4C0; --label: #E6CBBF; --focus: #F1D8D4; color-scheme: dark; }
+    :root:not([data-theme="light"]) { --bg: #1E1A16; --wash: #26211B; --card: #2E2720; --ink: #F5EEE3; --muted: #CFC3B1; --line: #463D32; --plum: #C99A45; --plum-ink: #2B2118; --plum-soft: #3A3020; --rose: #C99A45; --label: #D9B26A; --focus: #E3C27F; color-scheme: dark; }
   }
-  :root[data-theme="dark"] { --bg: #1C1516; --wash: #251C1D; --card: #2D2223; --ink: #F5ECEA; --muted: #CDBDBB; --line: #463637; --plum: #EBC4C0; --plum-ink: #2A1A14; --plum-soft: #3A2728; --rose: #EBC4C0; --label: #E6CBBF; --focus: #F1D8D4; color-scheme: dark; }
+  :root[data-theme="dark"] { --bg: #1E1A16; --wash: #26211B; --card: #2E2720; --ink: #F5EEE3; --muted: #CFC3B1; --line: #463D32; --plum: #C99A45; --plum-ink: #2B2118; --plum-soft: #3A3020; --rose: #C99A45; --label: #D9B26A; --focus: #E3C27F; color-scheme: dark; }
   *, *::before, *::after { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.7; }
   .wrap { width: 100%; max-width: 44rem; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 2.5rem); }
@@ -33,7 +33,7 @@
   h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.375rem; line-height: 1.25; margin: 2.25rem 0 0.75rem; text-wrap: balance; }
   p { margin: 0 0 1rem; }
   ul { margin: 0 0 1rem; padding-left: 1.25rem; display: grid; gap: 0.5rem; }
-  a { color: var(--plum); text-underline-offset: 3px; }
+  a { color: var(--label); text-underline-offset: 3px; }
   a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
   footer { padding-block: 2rem; border-top: 1px solid var(--line); font-size: 0.9375rem; color: var(--muted); }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; justify-content: space-between; }
