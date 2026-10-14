@@ -11,14 +11,9 @@
 <!--
   ============================================================
   PLACEHOLDERS TO REPLACE BEFORE PUBLISHING
-  1. [INSERT BOOKING LINK]         every "Book Your Next Step" button (3)
-  2. [INSERT CONTACT EMAIL]        FAQ note and footer (2 links, shown as text too)
-  3. [INSERT PRIVACY POLICY LINK]  footer
-  4. [INSERT TERMS LINK]           footer
-  5. PHOTO PLACEHOLDER             About section: replace the
-                                   <div class="photo-placeholder"> with
-                                   <img src="your-photo.jpg" alt="Nechelle Marie">
-  Search this file for "INSERT" and "PLACEHOLDER" to find each one.
+  1. [INSERT PRIVACY POLICY LINK]  footer
+  2. [INSERT TERMS LINK]           footer
+  Booking link, contact email and photo (nechelle-marie.jpg) are filled in.
   ============================================================
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,6 +157,7 @@
   /* About */
   .about { display: grid; gap: 2rem; align-items: start; }
   @media (min-width: 720px) { .about { grid-template-columns: 15rem 1fr; gap: 2.75rem; } .about-wrap { max-width: 58rem; } }
+  .portrait { width: 100%; max-width: 18rem; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
   .photo-placeholder {
     aspect-ratio: 4 / 5; width: 100%; max-width: 18rem; border: 2px dashed var(--rose); border-radius: var(--radius);
     background: repeating-linear-gradient(135deg, var(--plum-soft) 0 12px, transparent 12px 24px);
@@ -219,8 +215,7 @@
         <h1 id="hero-title">Everybody comes to you. <em>Where do you go when you need support?</em></h1>
         <p class="lede">Your Next Step is a 60-minute private coaching session for the woman who holds everything together for everyone else. We’ll talk through what’s weighing on you, choose one clear priority, and build a plan for the next seven days that fits the life you actually have.</p>
         <div class="cta">
-          <!-- PLACEHOLDER: booking link -->
-          <a class="btn" href="[INSERT BOOKING LINK]">Book Your Next Step
+          <a class="btn" href="https://calendly.com/nechellemarie/30min">Book Your Next Step
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <p class="cta-note">You don’t need to have it all figured out before you book.</p>
@@ -263,8 +258,7 @@
       </ol>
       <p class="callout">One session won’t settle every question in your life. It’s designed to give you a clear place to start and a plan you can act on this week.</p>
       <div class="cta">
-        <!-- PLACEHOLDER: booking link -->
-        <a class="btn" href="[INSERT BOOKING LINK]">Book Your Next Step
+          <a class="btn" href="https://calendly.com/nechellemarie/30min">Book Your Next Step
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -303,11 +297,7 @@
   <section aria-labelledby="about-title">
     <div class="wrap about-wrap">
       <div class="about">
-        <!-- PLACEHOLDER: replace this whole div with
-             <img src="your-photo.jpg" alt="Nechelle Marie" style="border-radius:14px; aspect-ratio:4/5; object-fit:cover;"> -->
-        <div class="photo-placeholder" role="img" aria-label="Photo placeholder for Nechelle Marie">
-          <p>PHOTO PLACEHOLDER<small>Replace with your photo before publishing</small></p>
-        </div>
+        <img class="portrait" src="nechelle-marie.jpg" alt="Nechelle Marie" width="800" height="1000" loading="lazy">
         <div class="stack">
           <p class="eyebrow">Meet your coach</p>
           <h2 id="about-title">Hi, I’m Nechelle Marie.</h2>
@@ -344,8 +334,7 @@
           <p>No. Your Next Step is coaching. It is not therapy or mental health treatment. Our work focuses on priorities, decisions, boundaries, and practical next steps. If you’re looking for mental health support, please reach out to a licensed mental health professional.</p>
         </details>
       </div>
-      <!-- PLACEHOLDER: contact email (link and visible text) -->
-      <p class="muted">Have another question? Email <a href="mailto:[INSERT CONTACT EMAIL]">[INSERT CONTACT EMAIL]</a>.</p>
+      <p class="muted">Have another question? Email <a href="mailto:nechelle@iamnechellemarie.com">nechelle@iamnechellemarie.com</a>.</p>
     </div>
   </section>
 
@@ -354,8 +343,7 @@
     <div class="wrap stack" style="gap: 1.75rem;">
       <h2 id="closing-title">You don’t have to know where to start. We can work through that together.</h2>
       <div class="cta">
-        <!-- PLACEHOLDER: booking link -->
-        <a class="btn" href="[INSERT BOOKING LINK]">Book Your Next Step
+          <a class="btn" href="https://calendly.com/nechellemarie/30min">Book Your Next Step
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <p class="cta-note">Pricing and payment details are shown on the booking page before you pay.</p>
@@ -368,10 +356,10 @@
   <div class="wrap">
     <p><span class="footer-brand">Living Lyfe on Purpose</span><br>© 2026 Living Lyfe on Purpose. All rights reserved.</p>
     <nav aria-label="Legal">
-      <!-- PLACEHOLDERS: privacy policy, terms, contact email -->
+      <!-- PLACEHOLDERS: privacy policy and terms links -->
       <a href="[INSERT PRIVACY POLICY LINK]">Privacy Policy</a>
       <a href="[INSERT TERMS LINK]">Terms</a>
-      <a href="mailto:[INSERT CONTACT EMAIL]">Contact</a>
+      <a href="mailto:nechelle@iamnechellemarie.com">Contact</a>
     </nav>
   </div>
 </footer>
