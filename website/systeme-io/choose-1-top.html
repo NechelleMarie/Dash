@@ -1,0 +1,61 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap"><style>
+.nm{--rose:#C8A29E;--blush:#D4B8B0;--ink:#0E0E0E;--muted:#3A2E2B;--taupe:#8F7166;--white:#FFFFFF;--line:#B8928D;
+ --serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:"Figtree","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-family:var(--sans);color:var(--ink);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+.nm *,.nm *::before,.nm *::after{box-sizing:border-box}
+.nm h1,.nm h2,.nm h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0;text-wrap:balance;color:var(--ink)}
+.nm p{margin:0}
+.nm a{color:var(--ink);text-underline-offset:3px}
+.nm a:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.nm .wrap{width:100%;max-width:46rem;margin-inline:auto;padding-inline:20px}
+.nm .sec{padding-block:clamp(3.5rem,8vw,6rem)}
+.nm .rose{background:var(--rose)} .nm .blush{background:var(--blush)} .nm .white{background:var(--white)}
+.nm .stack{display:flex;flex-direction:column;gap:1.15rem}
+.nm .label{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.nm .muted{color:var(--muted)}
+.nm h1{font-size:clamp(2.1rem,1.5rem + 3vw,3.25rem)}
+.nm h2{font-size:clamp(1.6rem,1.25rem + 1.6vw,2.25rem)}
+.nm h3{font-size:1.35rem}
+.nm .lede{font-size:1.125rem;line-height:1.55}
+.nm .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:.9rem 1.75rem;border-radius:999px;background:var(--taupe);color:var(--white);font:700 19px/1.2 var(--sans);text-decoration:none;text-align:center}
+.nm .btn.alt{background:var(--white);color:var(--ink);border:1px solid var(--line);font-size:17px}
+@media(max-width:560px){.nm .btn{width:100%}}
+.nm .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.3rem}
+.nm .grid{display:grid;gap:.85rem}
+@media(min-width:720px){.nm .grid.two{grid-template-columns:1fr 1fr}.nm .grid.three{grid-template-columns:repeat(3,1fr)}}
+.nm .step{display:flex;flex-direction:column;gap:.35rem}
+.nm .step .num{font-family:var(--serif);font-size:1.1rem;width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--ink)}
+.nm .anchor-line{font-family:var(--serif);font-size:1.3rem;line-height:1.35;border-left:3px solid var(--taupe);padding-left:1rem}
+.nm header.top{background:var(--rose);padding-block:14px;border-bottom:1px solid var(--line)}
+.nm header.top .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:68rem;margin-inline:auto;padding-inline:20px}
+.nm .logo{font-family:var(--serif);font-size:1.2rem;text-decoration:none;color:var(--ink)}
+.nm nav.menu{display:flex;gap:1.25rem;align-items:center}
+.nm nav.menu a{text-decoration:none;font-weight:600;font-size:15px}
+.nm .navbtn{min-height:44px;padding:.55rem 1.1rem;font-size:15px}
+.nm details.mob{display:none}
+@media(max-width:760px){.nm nav.menu .lnk{display:none}.nm details.mob{display:block;position:relative}
+ .nm details.mob summary{list-style:none;cursor:pointer;font-weight:700;padding:.5rem .25rem;min-height:44px;display:flex;align-items:center}
+ .nm details.mob summary::-webkit-details-marker{display:none}
+ .nm details.mob .drop{position:absolute;right:0;top:110%;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:.5rem;display:flex;flex-direction:column;min-width:12rem;z-index:20}
+ .nm details.mob .drop a{padding:.7rem .8rem;text-decoration:none;font-weight:600}}
+.nm .hero{padding-block:28px 18px}
+.nm .hero .stack{gap:.9rem}
+.nm .formnote{font-size:14px;color:var(--muted);text-align:center;padding-block:10px 28px}
+.nm .about{display:grid;gap:1.75rem;align-items:start}
+@media(min-width:720px){.nm .about{grid-template-columns:15rem 1fr}}
+.nm .about img{width:100%;max-width:16rem;height:auto;border-radius:14px;aspect-ratio:4/5;object-fit:cover}
+.nm .title-line{font-size:15px;font-weight:600;color:var(--muted)}
+.nm footer.foot{background:var(--rose);padding-block:2.5rem;border-top:1px solid var(--line);font-size:15px}
+.nm footer.foot .cols{display:flex;flex-direction:column;gap:.9rem}
+.nm footer.foot nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+.nm footer.foot .brand{font-family:var(--serif);font-size:1.2rem}
+.nm .center{text-align:center;align-items:center}
+.nm .circle{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--white)}
+.nm ol.next{margin:0;padding-left:1.25rem;display:grid;gap:1rem}
+.nm .mockform{display:grid;gap:.7rem;max-width:30rem;margin-inline:auto;width:100%}
+.nm .mockform input{min-height:52px;border-radius:12px;border:1px solid var(--line);padding:0 1rem;font:17px var(--sans);background:var(--white);color:var(--ink);width:100%}
+@media (prefers-reduced-motion:reduce){.nm *{scroll-behavior:auto}}
+</style><div class="nm rose"><section class="sec rose" style="padding-bottom:1.5rem"><div class="wrap stack">
+  <h1>You’re in. Now choose your time.</h1>
+  <p class="lede">Pick the day and time that work best for you. Your confirmation email will include the Zoom link for your session.</p>
+</div></section></div>
